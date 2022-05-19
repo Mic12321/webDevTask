@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <meta content="text">
+        <!-- https://www.inmotionhosting.com/support/edu/wordpress/viewpoint-meta-tag-website-responsive-template/#:~:text=What%20is%20the%20viewport%20Meta%20tag%3F%20The%20viewport,than%20the%20default%20view%3B%20therefore%20being%20deemed%20%E2%80%9Cvirtual%E2%80%9C. -->
+        <meta content="width=device-width" name="viewport">
+        <!-- https://webhint.io/docs/user-guide/hints/hint-http-cache/?source=devtools -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>Rubik's cube Tutorial F2L</title>
+
+        <!-- Reference For JS defer -->
+        <!-- https://www.w3schools.com/tags/att_script_defer.asp -->
+        <!-- https://javascriptsoldier.com/items/uncaught-typeerror-cannot-read-properties-of-null-reading-style-js -->
+        <script defer src="../js/scripts.js"></script>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!-- Remind message at top-->
+        <div id="reminder_base">
+            <h3>By continue using this web, you agree this web saves your colour preference data in your browser, to improve your experience</h3>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <ul id="hor">
+                <li id="large_web_logo"><img src="../picture/logo_transparent.png" alt="web logo"></li>
+                <li><a href="home.html">Home</a></li>
+
+                <li id="current_page"><a href="F2L.html">Cross & F2L</a>
+                    <ul class="dropdown">
+                        <li><a href="F2L.html#cross_content">Cross</a></li>
+                        <li><a href="F2L.html#first_layer_corner_content">First layer</a></li>
+                        <li><a href="F2L.html#second_layer_content">Second layer</a></li>
+                    </ul>
+                </li>
+                <li class="hidden_small"><a href="top.html">Top</a></li>
+                <li class="hidden_small"><a href="third_layer.html">Third layer</a></li>
+                <li class="hidden_small"><a href="advanced.html">Advanced</a></li>
+                <li class="hidden_small"><a href="other.html">Other</a></li>
+                <li id="more_base"><a>More</a>
+                    <ul class="dropdown">
+                        <li><a href="top.html">Top</a></li>
+                        <li><a href="third_layer.html">Third layer</a></li>
+                        <li><a href="advanced.html">Advanced</a></li>
+                        <li><a href="other.html">Other</a></li>
+                    </ul>
+                </li>       
+                <!-- <li id="change_theme_button"><a href="#">Theme</a></li> -->
+                <li id="change_theme_button" onclick="change_theme()"><a>Theme</a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Small screen navigation -->
+        <!-- always show (hor)-->
+        <div class="nav" id="small_nav_1">
+            <li id="small_web_logo"><img src="../picture/logo_transparent.png" alt="web logo"></li>
+            <li><a></a></li>
+            <li id="ver_nav_button" onclick="show_more_menu()">Menu</li>
+        </div>
+        <!-- small screen dropdown (ver)-->
+        <div class="nav" id="small_nav_2">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li id="current_page"><a href="F2L.html">F2L</a></li>
+                <li><a href="top.html">Top</a></li>
+                <li><a href="third_layer.html">Third layer</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="other.html">Other</a></li>
+                <li id="change_theme_button" onclick="change_theme()"><a>Theme</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <!-- Back to top button -->
+            <div>
+                <a href="#" id="back_to_top">^</a>
+            </div>
+
+            <!-- title with spotlight-->
+            <div class="title">
+                <h1 id="title_content">Rubik's cube Tutorial</h1>
+                <h1 id="title_animation">Rubik's cube Tutorial</h1>
+            </div>
+            <div class="hor_center">
+                <div>
+                    <h1 id="cross_content">Cross</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_cross01_trans.png" alt="Cube cross picture">
+                        </div>
+                        <div class="half_2">
+                            <P>The first step is to make one of the side to have the cross shape. For beginners, colour white is suggested to practice.
+                                Please remember the cell in the middle of the top row need to be the same colour as the center cell.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="margin-between"></div>
+                <div>
+                    <h1 id="first_layer_corner_content">First Layer Corner</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_FL01_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>The second step is to make the edge to be correct. Please remember the edge blocks need to be matced the colour with different sides.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1 id="second_layer_content">Second Layer</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L01_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>Well done~! Now you have solved one side with one layer. Now, we will apply some formulas to solve it quickly. Please flip your cube.
+                                The fully solved side will be the side of bottom. And there are two cases to solve the second layer.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>First case</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L02_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>Please apply the formula "URU'R' U'F'UF". If you apply the correct formula in correct scenario, the block colour will be matched both sides.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>First case result</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L03_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>If the colour does not match, you may applied the wrong formula to the case.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>Second case</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L04_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>Please apply the formula "U'F'UF URU'R'". If you apply the correct formula in correct scenario, the block colour will be matched both sides.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>Second case result</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L05_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>If the colour does not match, you may applied the wrong formula to the case.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>The wrong result or some cases</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L06_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>In this case, you can see the colour is flipped. You can either apply one of the formulas that mentioned above. Then, the block does not match colour will be released.
+                                After that, you can solve it and see the scenario above.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>The first two layer result</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_2L07_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>After you finished, you can check is it same as the picture (First two layers only).
+                                If it is same, congratulations. You can go to the next step.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+            </div>
+            <!-- Footer -->
+            <div id="footer" class="hor_center">
+                <ul id="footer_list">
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.Instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/?lang=en-gb" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </body>
+</html>

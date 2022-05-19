@@ -1,0 +1,534 @@
+/* https://stackoverflow.com/questions/43303631/make-a-dropdown-menu-in-flexbox-navbar#:~:text=By%20adding%20position%3A%20relative%20to%20the%20nav%20and,make%20them%20stretch%20horizontally%20Updated%2Fadded%20these%203%20rules */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    border: 0px;
+    margin: 0px;
+    overflow-y: scroll;
+    /* Using safe-font style https://www.w3schools.com/cssref/css_fonts_fallbacks.asp */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0px;
+    border: 0px;
+}
+
+ul, ol, li, h2 {
+    font-size: 1.5rem;
+    margin: 0px;
+    border: 0px;
+    list-style-type: none;  
+}
+
+
+/* Reference: https://www.codingflicks.com/2020/10/flexbox-dropdown-menu.html */
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul {
+    padding: 20px 30px 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav li a {
+    height: 25px;
+    padding: 20px 50px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav li a:hover {
+    display: block;
+}
+
+.nav li {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown li{
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown li a{
+    margin: 0px;
+}
+
+.dropdown {
+    padding: 0px !important;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav li:hover .dropdown li{
+    display: block;
+    top: 0;
+}
+
+#change_theme_button {
+    width: 50%;
+    cursor: pointer;
+}
+
+#more_base {
+    display: none;
+    width: 0%;
+}
+
+/* https://www.youtube.com/watch?v=tf9Ueehm03s */
+#title_content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#title_animation {
+    position: absolute;
+    color: transparent;
+    animation: move_light 4s infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.title {
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@keyframes move_light {
+    0% {
+        /* Set circle in the beginning of the text*/
+        clip-path: ellipse(200px 200px at 0%);
+    }
+
+    50% {
+        /* Set circle at the end of the text*/
+        clip-path: ellipse(200px 200px at 100%);
+    }
+
+    100% {
+        /* Set circle in the beginning of the text*/
+        clip-path: ellipse(200px 200px at 0%);
+    }
+}
+
+.hor_center {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.home_intro {
+    display: flex;
+    justify-content: center;
+}
+/* 
+https://www.w3schools.com/css/css_rwd_images.asp */
+.half_1 img{
+    width: 50%;
+    height: auto;
+}
+
+.half_1 {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.half_2 {
+    display: flex;
+    width: 20%;
+    margin: 0 10% 0 0;
+    align-items: center;
+}
+
+.half_2 p{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.margin-between {
+    margin: 3%;
+}
+
+#back_to_top {
+    display: none;
+    text-decoration: none;
+    padding: 2%;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+
+
+
+#footer {
+    padding: 0 0 25px 0;
+}
+
+#footer p {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+
+#footer_list{
+    display: flex;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#footer_list li {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#footer_list li a{
+    text-decoration: none;
+}
+
+#footer_list li a:hover{
+    text-decoration: underline;
+}
+
+#vertical {
+    display: none;
+}
+
+#small_nav_1 {
+    display: none;
+}
+
+#ver_nav_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#small_nav_2 {
+    display: none;
+}
+
+
+#small_nav_2 ul{
+    padding: 0%;
+}
+
+#small_web_logo img{
+    display: none;
+    border-radius: 8px;
+}
+
+#large_web_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Prevent crash (Prevent logo li total height (with padding) increase)*/
+    max-height: 25px;   
+    padding: 20px 50px;
+        
+}
+
+#large_web_logo img{
+    width: 20%;
+    height: auto;
+}
+
+#reminder_base {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Reference: https://www.gosink.in/javascript-css-toggle-dark-light-theme-based-on-your-users-preferred-scheme/ */
+@media(prefers-color-scheme: dark) {
+    a {
+        color: white;
+    }
+    body {
+        background-color: rgb(24, 24, 24);
+        color: white;
+    }
+    
+    .nav li {
+        background-color: #383838;
+    }
+    
+    /* Same color as Light theme */
+    .nav li a:hover {
+        background-color: #ebebeb;
+    }
+    
+    
+    #current_page {
+        background-color: rgb(83, 83, 83);
+    }
+    
+    #title_animation {
+        background-image: linear-gradient(to right, rgb(183, 183, 183), rgb(44, 44, 44));
+    }
+    
+    #back_to_top {
+        background-color: rgb(83, 83, 83);
+        color: white;
+    }
+    
+    
+    #footer {
+        background-color: rgb(46, 46, 46);
+        border-top-color: rgb(83, 83, 83);
+        color:white
+    }
+
+    #small_nav_2 {
+        background-color: #383838;
+    }
+
+    #small_nav_1 li a{
+        background-color: #383838;
+    }
+
+    #ver_nav_button {
+        background-color: #383838;
+    }
+
+    #cookies_box {
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(187, 255, 0);
+    }
+
+    #cookies_selection_base li{
+        border-color: black;
+        background-color: grey;
+    }
+}
+
+
+@media(prefers-color-scheme: light) {
+    a {
+        color: black;
+    }
+    
+    body {
+        color: black;
+        background-color: #adc2eb;
+    }
+    
+    .nav li {
+        background-color: #d6e2f5;
+    }
+    
+    /* Same color as Dark theme */
+    .nav li a:hover {
+        background-color: #ebebeb;
+    }
+    
+    #current_page {
+        background-color: #6f94dc;
+    }
+    
+    #title_animation {
+        background-image: linear-gradient(to right, rgb(0, 102, 255),rgb(153, 1, 255));
+    }
+    
+    
+    #back_to_top {
+        background-color: #4da6ff;
+        color: black;
+    }
+    
+    #footer {
+        background-color: #d6e2f5;
+        border-top: 1px solid rgb(255, 255, 255);
+        color: black;
+    }
+
+    #small_nav_2 {
+        background-color: #d6e2f5;
+    }
+
+    #small_nav_1 li a{
+        background-color: #d6e2f5;
+    }
+
+    #ver_nav_button {
+        background-color: #d6e2f5;
+    }
+
+    #cookies_box {
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(187, 255, 0);
+    }
+
+    #cookies_selection_base li{
+        border-color: black;
+        background-color: grey;
+    }
+} 
+
+
+
+
+
+
+
+/*Reference: https://www.hobo-web.co.uk/best-screen-size/ */
+
+@media screen and (min-width: 1330px) and (max-width: 1600px) {
+    .hidden_small {
+        display: none;
+        width: 0%;
+    }
+
+    #more_base {
+        display: block;
+        width: 100%;
+    }
+
+
+    #more_base li a{
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    #hor {
+        display: flex;
+    }
+
+    #vertical {
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 1329px) {
+    body {
+        min-width: 360px;
+    }
+    .nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav ul > li{
+        display: block;
+    }
+
+    /* Can't show normally */
+    #change_theme_button {
+        width: 100%;
+    }
+
+    .dropdown {
+        position:relative;
+    }
+
+    .home_intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .half_1 {
+        width: 60%;
+        text-align: center;
+    }
+
+    .half_2 {
+        margin: 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #hor {
+        display: none;
+    }
+
+    #vertical {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #small_nav_1 {
+        display: flex;
+    }
+
+
+
+
+    #small_nav_2 {
+        z-index: 99;
+        width: 100%;
+        height: 0%;
+        position: fixed;
+        background-color: #383838;
+        overflow: hidden;
+        transition: height 0.5s;
+        display: block;
+    }
+
+    #small_web_logo img{
+        display: block;
+        width: 50px;
+        height: 100%;
+    }
+
+    #small_web_logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #large_web_logo {
+        display: none;
+    }
+
+    #reminder_base {
+        font-size: 0.75rem;
+    }
+
+
+
+
+}

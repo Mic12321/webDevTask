@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <meta content="text">
+        <!-- https://www.inmotionhosting.com/support/edu/wordpress/viewpoint-meta-tag-website-responsive-template/#:~:text=What%20is%20the%20viewport%20Meta%20tag%3F%20The%20viewport,than%20the%20default%20view%3B%20therefore%20being%20deemed%20%E2%80%9Cvirtual%E2%80%9C. -->
+        <meta content="width=device-width" name="viewport">
+        <!-- https://webhint.io/docs/user-guide/hints/hint-http-cache/?source=devtools -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>Rubik's cube Tutorial Third_layer</title>
+
+        <!-- Reference For JS defer -->
+        <!-- https://www.w3schools.com/tags/att_script_defer.asp -->
+        <!-- https://javascriptsoldier.com/items/uncaught-typeerror-cannot-read-properties-of-null-reading-style-js -->
+        <script defer src="../js/scripts.js"></script>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!-- Remind message at top-->
+        <div id="reminder_base">
+            <h3>By continue using this web, you agree this web saves your colour preference data in your browser, to improve your experience</h3>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <ul id="hor">
+                <li id="large_web_logo"><img src="../picture/logo_transparent.png" alt="web logo"></li>
+                <li><a href="home.html">Home</a></li>
+
+                <li><a href="F2L.html">Cross & F2L</a>
+                    <ul class="dropdown">
+                        <li><a href="F2L.html#cross_content">Cross</a></li>
+                        <li><a href="F2L.html#first_layer_corner_content">First layer</a></li>
+                        <li><a href="F2L.html#second_layer_content">Second layer</a></li>
+                    </ul>
+                </li>
+                <li class="hidden_small"><a href="top.html">Top</a></li>
+                <li class="hidden_small" id="current_page"><a href="third_layer.html">Third layer</a></li>
+                <li class="hidden_small"><a href="advanced.html">Advanced</a></li>
+                <li class="hidden_small"><a href="other.html">Other</a></li>
+                <li id="more_base"><a>More</a>
+                    <ul class="dropdown">
+                        <li><a href="top.html">Top</a></li>
+                        <li id="current_page"><a href="third_layer.html">Third layer</a></li>
+                        <li><a href="advanced.html">Advanced</a></li>
+                        <li><a href="other.html">Other</a></li>
+                    </ul>
+                </li>       
+                <!-- <li id="change_theme_button"><a href="#">Theme</a></li> -->
+                <li id="change_theme_button" onclick="change_theme()"><a>Theme</a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Small screen navigation -->
+        <!-- always show (hor)-->
+        <div class="nav" id="small_nav_1">
+            <li id="small_web_logo"><img src="../picture/logo_transparent.png" alt="web logo"></li>
+            <li><a></a></li>
+            <li id="ver_nav_button" onclick="show_more_menu()">Menu</li>
+        </div>
+        <!-- small screen dropdown (ver)-->
+        <div class="nav" id="small_nav_2">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="F2L.html">F2L</a></li>
+                <li><a href="top.html">Top</a></li>
+                <li id="current_page"><a href="third_layer.html">Third layer</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="other.html">Other</a></li>
+                <li id="change_theme_button" onclick="change_theme()"><a>Theme</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <!-- Back to top button -->
+            <div>
+                <a href="#" id="back_to_top">^</a>
+            </div>
+
+            <!-- title with spotlight-->
+            <div class="title">
+                <h1 id="title_content">Rubik's cube Tutorial</h1>
+                <h1 id="title_animation">Rubik's cube Tutorial</h1>
+            </div>
+            
+            <div class="hor_center">
+                <div>
+                    <h1>Third layer</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_Top05_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>Awesome~! Now you are only one step left to solve the cube.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>First case</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_Third01_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>You can't find corner colour is same (third layer) in any sides. Please apply "RB'RF'F'R'BRF'F'RR". 
+                                After you applied, you should see same corner colour in one side or more sides.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>Second case</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_Third02_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>You can find corner colours are same (third layer) in one sides. Please apply "RB'RF'F'R'BRF'F'RR".
+                                After you applied, you should see all the corners are same colour.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>Third case (a)</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_Third03_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>all centre blocks are different in third layer, after you apply "R2UF'R2F'BUR2". You should see only three.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+                <div>
+                    <h1>Third case (b)</h1>
+                    <div class="home_intro">
+                        <div class="half_1">
+                            <img src="../picture/Cubes_Third04_trans.png" alt="Cube picture">
+                        </div>
+                        <div class="half_2">
+                            <P>three of the centre blocks are different, please use the formula "R2UF'R2F'BUR2", you need to be awared the scenario.
+                                If your scenario is inversed, you only need to apply this formula two times. And the Rubik's cube should be solved by you~! Congratulations.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-between"></div>
+            </div>
+            <!-- Footer -->
+            <div id="footer" class="hor_center">
+                <ul id="footer_list">
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.Instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/?lang=en-gb" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
